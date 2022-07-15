@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/092772493d.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
@@ -15,9 +16,35 @@
 
 <body>
     <div id="root">
-<div class="container">
-    
-</div>
+        <div class="container mt-3">
+            <div class="row h-100">
+                <!-- sezione sinistra utente notifiche e lista contatti chat -->
+                <div class="col-4">
+                    <div id="username" class="">
+                        <div class="row h-100">
+                            <div class="col-6 d-flex align-items-center"><img src="./img/avatar_io.jpg" alt="avatar_io"
+                                    class="img-fluid rounded-circle">
+                                <h6 id="userName" class="ms-2">Federico</h6>
+                            </div>
+                            <div
+                                class="col-6 d-flex   align-items-center                                                justify-content-end">
+                                <i class="fa-solid fa-circle-notch fa-xl mx-1"></i><i
+                                    class="fa-solid fa-message fa-xl mx-1"></i><i
+                                    class="fa-solid fa-ellipsis-vertical fa-xl mx-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="notifications">
+                        <div class="row">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-8"></div>
+            </div>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>
