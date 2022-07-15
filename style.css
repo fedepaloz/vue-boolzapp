@@ -1,24 +1,47 @@
+/* *{
+    border: 1px dotted;
+} 
+ */
+
+
 body {
-    background: linear-gradient(to bottom, #009688 100px, #DADBD3 0);
+    background: linear-gradient(to bottom, #009688 150px, #DADBD3 0);
     height: 100Vh;
 }
 
-#username{background-color: #EAEAEA;}
-
-
-
-*{border: 1px dotted;}
-
-
-#username{
+#username {
+    background-color: #EAEAEA;
     height: 80px;
+    
 }
 
-#notifications{
-    background-color:#8EDAFC ;
+#notifications {
+    background-color: #8EDAFC;
 }
 
-#userSearch{background-color:#FAFAFA}
+#userSearch {
+    background-color: #FAFAFA
+}
 
-img{width: 60px;
-height: 60px;}
+.chatUser {
+    background-color: #EAEAEA;
+    height: 80px;
+
+}
+
+#chatSpace{
+    background-image:url(./img/mine.jpg);
+    height: 700px
+}
+
+img {
+    width: 60px;
+    height: 60px;
+}
+
+#chatContainer{height: 800px;}
+
+#usersList{background-color: white;
+height:638px}
+
+#sendMessage{background-color: #F3EEEA;}
