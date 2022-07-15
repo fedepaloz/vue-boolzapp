@@ -14,7 +14,11 @@ body {
     height: 80px;
 }
 
+#notifications{
+    background-color:#8EDAFC ;
+}
 
+#userSearch{background-color:#FAFAFA}
 
 img{width: 60px;
 height: 60px;}
