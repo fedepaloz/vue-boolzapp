@@ -1,3 +1,6 @@
+
+
+
 /* *{
     border: 1px dotted;
 } 
@@ -6,6 +9,7 @@
 
 body {
     background: linear-gradient(to bottom, #009688 150px, #DADBD3 0);
+    
     height: 100Vh;
 }
 
@@ -25,13 +29,14 @@ body {
 
 .chatUser {
     background-color: #EAEAEA;
-    height: 80px;
+   height: 80px;
 
 }
 
 #chatSpace{
     background-image:url(./img/mine.jpg);
-    height: 700px
+    height: 690px;
+    overflow-y: scroll
 }
 
 img {
@@ -39,9 +44,9 @@ img {
     height: 60px;
 }
 
-#chatContainer{height: 800px;}
 
 #usersList{background-color: white;
-height:638px}
+height:572px;
+overflow-y: scroll;}
 
 #sendMessage{background-color: #F3EEEA;}
