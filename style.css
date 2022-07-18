@@ -1,6 +1,3 @@
-
-
-
 /* *{
     border: 1px dotted;
 } 
@@ -9,14 +6,14 @@
 
 body {
     background: linear-gradient(to bottom, #009688 150px, #DADBD3 0);
-    
+
     height: 100Vh;
 }
 
 #username {
     background-color: #EAEAEA;
     height: 80px;
-    
+
 }
 
 #notifications {
@@ -29,12 +26,12 @@ body {
 
 .chatUser {
     background-color: #EAEAEA;
-   height: 80px;
+    height: 80px;
 
 }
 
-#chatSpace{
-    background-image:url(./img/mine.jpg);
+#chatSpace {
+    background-image: url(./img/mine.jpg);
     height: 690px;
     overflow-y: scroll
 }
@@ -45,39 +42,49 @@ img {
 }
 
 
-#usersList{background-color: white;
-height:572px;
-overflow-y: scroll;}
+#usersList {
+    background-color: white;
+    height: 572px;
+    overflow-y: scroll;
+}
 
-#sendMessage{background-color: #F3EEEA;}
+.users:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+#sendMessage {
+    background-color: #F3EEEA;
+}
 
 /* stile messaggi della chat verde e bianco */
 
-.user-message{
+.sent {
     max-width: 300px;
     border-radius: 15px;
-    background-color:#D5F9BA ;
-   /*  margin-left: 80%; */
+    background-color: #D5F9BA;
+    /*  margin-left: 80%; */
     padding: 10px;
-    margin:10px 0;
+    margin: 10px 0;
 }
 
-.my-message{
+.received {
     max-width: 300px;
     border-radius: 15px;
-    background-color:#ffffff ;
+    background-color: #ffffff;
     padding: 10px;
     align-self: flex-end;
     margin: 10px 0;
 }
 
-#right{justify-content:end;}
+#right {
+    justify-content: end;
+}
 
-#chat-container{
-   
+#chat-container {
+
     height: 100%;
     width: 80%;
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
 }
-

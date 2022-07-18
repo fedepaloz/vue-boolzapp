@@ -23,12 +23,11 @@
 
                     <!-- sezione nome utente federico -->
                     <div class="row" id="username">
-                        <div class="col-6 d-flex align-items-center"><img src="./img/avatar_io.jpg" alt="avatar_io"
-                                class="img-fluid rounded-circle">
-                            <h6 class="ms-2">Federico</h6>
+                        <div class="col-6 d-flex align-items-center"><img :src="`img/avatar${user.avatar}.jpg`"
+                                :alt="user.name" class="img-fluid rounded-circle">
+                            <h6 class="ms-2">{{user.name}}</h6>
                         </div>
-                        <div
-                            class="col-6 d-flex   align-items-center                                                justify-content-end">
+                        <div class="col-6 d-flex align-items-center justify-content-end">
                             <i class="fa-solid fa-circle-notch fa-xl mx-3"></i><i
                                 class="fa-solid fa-message fa-xl mx-3"></i><i
                                 class="fa-solid fa-ellipsis-vertical fa-xl mx-3"></i>
@@ -55,15 +54,15 @@
                         </form>
                     </div>
                     <!-- sezione lista utenti della chat -->
-                    
                     <div class="row py-3" id="usersList">
                         <div class="col">
                             <ul class="list-unstyled">
 
-                                <li class="users py-3">
-                                    <div class="col d-flex align-items-center"><img src="./img/avatar_1.jpg"
-                                            alt="avatar_io" class="img-fluid rounded-circle">
-                                        <h6 class="ms-2">Michele</h6>
+                                <li class="users py-3" v-for="(contact, i) in contacts" @click="currentIndex = i">
+                                    <div class="col d-flex align-items-center"><img
+                                            :src="`./img/avatar${contact.avatar}.jpg`" :alt="contact.name"
+                                            class="img-fluid rounded-circle">
+                                        <h6 class="ms-2">{{contact.name}}</h6>
 
                                     </div>
                                 </li>
@@ -79,12 +78,13 @@
                 <div class="col-8">
                     <!--utente con il quale sto scrivendo -->
                     <div class="row">
-                        <div class="col-6 d-flex align-items-center chatUser "><img src="./img/avatar_1.jpg"
-                                alt="avatar_1" class="img-fluid rounded-circle">
-                            <h6 class="ms-2">michele</h6>
+                        <div class="col-6 d-flex align-items-center chatUser ">
+                            <img :src="`./img/avatar${contacts[ currentIndex].avatar}.jpg`"
+                                :alt="contacts[ currentIndex].name" class="img-fluid rounded-circle">
+                            <h6 class="ms-2">{{contacts[ currentIndex].name}}</h6>
                         </div>
                         <div
-                            class="col-6 d-flex   align-items-center                                                justify-content-end chatUser">
+                            class="col-6 d-flex    align-items-center                                                justify-content-end chatUser">
                             <i class="fa-solid fa-magnifying-glass fa-xl mx-3"></i><i
                                 class="fa-solid fa-paperclip fa-xl mx-3"></i><i
                                 class="fa-solid fa-ellipsis-vertical fa-xl mx-3"></i>
@@ -94,14 +94,10 @@
                     <!-- spazio della chat con domande e risposte -->
                     <div class="row" id="chatSpace">
                         <div class="container" id="chat-container">
-                            <div class="user-message">
-                                <h6>ciao</h6>
+                            <div v-for="message in contacts[currentIndex].messages" :class="message.status" @click="">
+                                <h6>{{message.text}}</h6>
                             </div>
-                            <div class="my-message">
-                                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex animi ipsum
-                                    rerum repellendus soluta commodi alias laborum officiis vel. Dicta accusantium odio
-                                    ea delectus illo quibusdam consequatur ab vitae.</h6>
-                            </div>
+
                         </div>
                     </div>
 

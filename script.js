@@ -1,6 +1,7 @@
 const root = new Vue({
     el: '#root',
     data: {
+        currentIndex: 0,
         user: {
             name: 'Federico',
             avatar: '_io'
