@@ -1,6 +1,7 @@
 const root = new Vue({
     el: '#root',
     data: {
+        newText: '',
         currentIndex: 0,
         user: {
             name: 'Federico',
@@ -89,7 +90,20 @@ const root = new Vue({
             },
         ]
     },
-    methods: {},
+    methods: {
+        sendMessage() {
+            const newMessage = {
+                text: this.newText,
+                status: 'sent',
+
+            }
+
+            this.contacts[this.currentIndex].messages.push(newMessage),
+            this.newText = ''
+
+            
+        }
+    },
 })
 
 

@@ -94,7 +94,7 @@
                     <!-- spazio della chat con domande e risposte -->
                     <div class="row" id="chatSpace">
                         <div class="container" id="chat-container">
-                            <div v-for="message in contacts[currentIndex].messages" :class="message.status" @click="">
+                            <div v-for="message in contacts[currentIndex].messages" :class="message.status">
                                 <h6>{{message.text}}</h6>
                             </div>
 
@@ -106,8 +106,8 @@
                         <form class="d-flex" role="search">
                             <button class="btn btn-outline-muted" type="submit"><i
                                     class="fa-solid fa-face-smile fa-xl"></i></button>
-                            <input class="form-control me-2" type="search" placeholder="Scrivi un messaggio"
-                                aria-label="Search">
+                            <input v-model="newText" @keyup.enter="sendMessage" class="form-control me-2" type="search"
+                                placeholder="Scrivi un messaggio" aria-label="Search">
                             <button class="btn btn-outline-muted" type="submit"><i
                                     class="fa-solid fa-microphone fa-xl"></i></button>
                         </form>
