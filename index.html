@@ -47,9 +47,8 @@
                     <!-- sezione ricerca utente -->
                     <div class="row py-3" id="userSearch">
                         <form class="d-flex" role="search">
-                            <button class="btn btn-outline-muted" type="submit"><i
-                                    class="fa-solid fa-magnifying-glass"></i></button>
-                            <input class="form-control me-2" type="search" placeholder="cerca o inizia nuova chat"
+                            <button @click="findUSer" type="button" class="btn btn-info">cerca</button>
+                            <input v-model="userSearch" class="form-control me-2" type="search" placeholder="cerca o inizia nuova chat"
                                 aria-label="Search">
                         </form>
                     </div>
@@ -103,7 +102,7 @@
 
                     <!-- area digita testo della chat -->
                     <div class="row" id="sendMessage">
-                        <form class="d-flex" role="search">
+                        <form class="d-flex" role="search" onsubmit="return false;">
                             <button class="btn btn-outline-muted" type="submit"><i
                                     class="fa-solid fa-face-smile fa-xl"></i></button>
                             <input v-model="newText" @keyup.enter="sendMessage" class="form-control me-2" type="search"

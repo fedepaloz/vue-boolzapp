@@ -1,6 +1,7 @@
 const root = new Vue({
     el: '#root',
     data: {
+        userSearch:'',
         newText: '',
         currentIndex: 0,
         user: {
@@ -91,6 +92,9 @@ const root = new Vue({
         ]
     },
     methods: {
+
+        
+
         sendMessage() {
             const newMessage = {
                 text: this.newText,
@@ -99,11 +103,17 @@ const root = new Vue({
             }
 
             this.contacts[this.currentIndex].messages.push(newMessage),
-            this.newText = ''
+                this.newText = ''
 
-            
+
         }
     },
 })
 
-
+/* L'input deve avere un v-model conuna variabile del data
+Terminato di scrivere alla pressione del pulsante invio viene richiamato il metodo findUsers
+All'itnerno devi fare queste cose:
+Portare in minuscolo la parola che hai inserito nell'iinpu
+Ciclare l'array dei contatti
+Portare il nome del contatto attualmente ciclato in minuscolo
+Verificare se il nome del contatto include la parola cercata. In caso positivo cambiare il valore di visible a true, altrimenti a false */
